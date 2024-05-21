@@ -35,6 +35,7 @@ deactivate
 
 pip install -r requirements.txt
 
+psycopg_c  
 pip install dj-database-url
 pip install gunicorn
 gunicorn SAWAABA.wsgi
