@@ -1,0 +1,34 @@
+<!-- travel/templates/travel/base.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Onvigo Travel{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>ONVIGO TRAVEL</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'travel:index' %}" class="{% if request.path == '/' %}active{% endif %}">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ONVIGO TRAVEL. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

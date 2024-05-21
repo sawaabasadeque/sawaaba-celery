@@ -1,0 +1,275 @@
+/* styles.css */
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+/* Example with a vendor prefix for a transition property */
+/* element {
+    -webkit-transition: property 0.3s;
+    transition: property 0.3s;
+} */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    background-color: #fff; /* Set your desired container background color */
+    padding: 20px; /* Adjust the padding as needed */
+    padding-bottom: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for a visual effect */
+    margin-top: 50px; /* Optional: Add margin from the top */
+    overflow: auto;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    display: block;
+}
+
+nav ul li:nth-child(odd) {
+    background-color: #5c6868; /* Color for odd menu items */
+}
+
+nav ul li:nth-child(even) {
+    background-color: #939b9b; /* Color for even menu items */
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: #333333;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+nav ul ul li {
+    width: 200px;
+    float: none;
+    display: list-item;
+    position: relative;
+    background-color: #777; /* Color for sub-menu items */
+}
+
+nav ul ul li a {
+    padding: 10px;
+    color: #fff;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Image Circled */
+
+.circular-image {
+    width: 100px; /* Set the desired width */
+    height: 100px; /* Set the desired height */
+    border-radius: 50%; /* Use border-radius to create a circular shape */
+    overflow: hidden; /* Hide overflow content outside the circle */
+}
+
+.circular-image img {
+    width: 100%; /* Make the image fill the circular container */
+    height: auto; /* Maintain the aspect ratio of the image */
+    display: block; /* Remove any extra spacing or borders */
+}
+
+/* Add your custom styles here */
+.section {
+    margin: 20px;
+}
+
+.header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    width: 48%; /* Adjust the width of the columns as needed */
+}
+
+.element {
+    margin-bottom: 10px;
+}
+
+/* table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2; /* Set background color for header row */
+    text-align: center; /* Center align the text in the header */
+}
+
+td:nth-child(even) {
+    background-color: #f9f9f9; /* Set background color for even columns */
+}
+
+td:nth-child(odd) {
+    background-color: #ffffff; /* Set background color for odd columns */
+}
+
+/* Add your preferred standard button and container styles here */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; Optional: Set height for vertical centering */
+  }
+
+.standard-button {
+    padding: 10px 20px;
+    font-size: 13px;
+    background-color: #e2e7e2; /* Green background color */
+    color: rgb(41, 29, 175); /* White text color */
+    font-weight: bold;
+    border:2px solid #333; /* Remove border */
+    border-radius: 4px; /* Add border-radius for rounded corners */
+    cursor: pointer; /* Add cursor pointer on hover */
+    /* Add box-shadow for a raised effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 5px; /* Optional: Add margin between buttons */
+}
+
+/* Add hover effect */
+.standard-button:hover {
+  background-color: #777a77; /* Darker green color on hover */
+}
+
+/* error */
+.error {
+    color: red;
+}
+
+/* Home page carousel */
+.carousel-item img {
+    width: 100%; /* Adjust the width to fit the carousel container */
+    height: 900px; /* Set a fixed height */
+    object-fit: cover; /* Cover the container without losing aspect ratio */
+}
+
+/* Form field alignment */
+.form-horizontal .form-row {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form-horizontal .form-label {
+    flex: 0 0 50%; /* Adjust width as needed */
+    text-align: right;
+    padding-right: 10px; /* Adds some space between the label and the field */
+}
+
+.form-horizontal .form-field {
+    flex: 1; /* Takes the remaining space */
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    border-radius: 5px; /* Rounded corners */
+    margin: 4px; /* Add space around buttons */
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ccc;
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); Elevate the button */
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2); /* Slightly elevate the active button */
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+  
+  .tabsection {
+    display: none;
+    margin-top: 20px;
+  }
+  

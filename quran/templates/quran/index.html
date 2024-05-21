@@ -1,0 +1,31 @@
+<!-- quran/templates/quran/index.html -->
+
+{% extends 'quran/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <section class="container">
+        {% load static %}
+        <ul>
+            {% for surah in surahs %}
+            <p>
+                <header><strong>{{ surah.number }}. {{ surah.name }}</strong></header>
+                <ul>
+                    {% for ayah in surah.ayahs.all|dictsort:"number_in_surah" %}
+                        <table style="width: 100%; font-size: xx-large;">
+                            <tr>
+                                <td style="width: 95%; text-align: right;">{{ ayah.arabic_text }}</td>
+                                <td style="width: 5%; text-align: right;">:{{ ayah.number_in_surah }}</td>
+                            </tr>
+                        </table>
+                    {% endfor %}
+                </ul>
+            </p>
+            {% endfor %}
+        </ul>
+
+        
+
+    </section>
+{% endblock %}
