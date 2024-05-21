@@ -78,19 +78,19 @@ WSGI_APPLICATION = 'SAWAABA.wsgi.application'
 # Database
 
 DATABASES = {
-    'default': {
-        'ENGINE': os.environ['PG_DB_ENGINE'],
-        'NAME': os.environ['PG_DB_NAME'],
-        'USER': os.environ['PG_DB_USER'],
-        'PASSWORD': os.environ['PG_DB_PASSWORD'],
-        'HOST': os.environ['PG_DB_HOST'],
-        'PORT': '5432'
-    }
+    # 'default': {
+    #     'ENGINE': os.environ['PG_DB_ENGINE'],
+    #     'NAME': os.environ['PG_DB_NAME'],
+    #     'USER': os.environ['PG_DB_USER'],
+    #     'PASSWORD': os.environ['PG_DB_PASSWORD'],
+    #     'HOST': os.environ['PG_DB_HOST'],
+    #     'PORT': '5432'
+    # }
 }
 
-# import dj_database_url
-# database_url = os.environ["DATABASE_URL"]
-# DATABASES["default"] = dj_database_url.parse(database_url)
+import dj_database_url
+database_url = os.environ["DATABASE_URL"]
+DATABASES["default"] = dj_database_url.parse(database_url)
 
 
 AUTH_PASSWORD_VALIDATORS = [
