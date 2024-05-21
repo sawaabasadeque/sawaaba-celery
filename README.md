@@ -73,8 +73,8 @@ export PATH=$PATH:/usr/local/sbin
 brew services start rabbitmq
 pip install celery
 celery.py > add and copy paste codes
-celery -A SAWAABA worker -l info
-celery -A SAWAABA beat --loglevel=info
+celery -A SAWAABA_CELERY worker -l info
+celery -A SAWAABA_CELERY beat --loglevel=info
 
 
 <!-- https://docs.render.com/deploy-django -->

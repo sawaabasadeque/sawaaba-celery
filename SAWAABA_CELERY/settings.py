@@ -154,8 +154,8 @@ CELERY_BROKER_TRANSPORT_OPTIONS = {'visibility_timeout': 3600}
 CELERY_BEAT_SCHEDULE = {
     'notify-passport-expiry-every-5-minutes': {
         'task': 'travel.tasks.notify_passport_expiry',
-        # 'schedule': crontab(hour=23, minute=59, day_of_month=1),
-        'schedule': crontab(minute='*/5'),
+        'schedule': crontab(hour=23, minute=59, day_of_month=1),
+        # 'schedule': crontab(minute='*/5'),
     },
 }
 
